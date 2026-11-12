@@ -189,16 +189,16 @@
                     <circle cx="610" cy="260" r="9.5" fill="#06b6d4" stroke="#cffafe" stroke-width="2.2"/>
                   </g>
 
-                  <!-- 4. Centro Galáctico (Sgr A*) -->
+                  <!-- 4. Centro Galáctico (Sgr A*) en verde -->
                   <g class="diagram-hotspot" data-info="center">
-                    <circle cx="480" cy="260" r="13" fill="#facc15" stroke="#fef9c3" stroke-width="3"/>
+                    <circle cx="480" cy="260" r="13" fill="#4ade80" stroke="#dcfce7" stroke-width="3"/>
                   </g>
 
-                  <!-- 5. Posición del Sol (~8 kpc) y líneas de visión -->
+                  <!-- 5. Posición del Sol (~8 kpc) y líneas de visión en amarillo -->
                   <g class="diagram-hotspot" data-info="sun">
-                    <line x1="255" y1="260" x2="415" y2="95" stroke="#4ade80" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
-                    <line x1="255" y1="260" x2="415" y2="425" stroke="#4ade80" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
-                    <circle cx="255" cy="260" r="8.5" fill="#4ade80" stroke="#dcfce7" stroke-width="2.2"/>
+                    <line x1="255" y1="260" x2="415" y2="95" stroke="#facc15" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+                    <line x1="255" y1="260" x2="415" y2="425" stroke="#facc15" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+                    <circle cx="255" cy="260" r="8.5" fill="#facc15" stroke="#fef9c3" stroke-width="2.2"/>
                   </g>
 
                   <!-- ETIQUETAS EXTERNAS AMPLIADAS PARA LECTURA CÓMODA -->
@@ -221,12 +221,12 @@
                     <text x="150" y="98" text-anchor="middle" fill="#e2e8f0" font-size="13.5">Rayos gamma (γ) • |b| ≤ 50°</text>
                   </g>
 
-                  <!-- Etiqueta 3: Posición del Sol (Izquierda Media) -->
+                  <!-- Etiqueta 3: Posición del Sol (Izquierda Media) en amarillo -->
                   <g class="diagram-hotspot" data-info="sun">
-                    <polyline points="255,250 246,196 238,196" fill="none" stroke="#4ade80" stroke-width="1.8"/>
-                    <circle cx="255" cy="250" r="4" fill="#4ade80"/>
-                    <rect x="22" y="166" width="216" height="58" rx="10" fill="#0b1120" fill-opacity="0.94" stroke="#4ade80" stroke-width="1.6"/>
-                    <text x="130" y="191" text-anchor="middle" fill="#86efac" font-size="15.5" font-weight="700">Posición del Sol</text>
+                    <polyline points="255,250 246,196 238,196" fill="none" stroke="#facc15" stroke-width="1.8"/>
+                    <circle cx="255" cy="250" r="4" fill="#facc15"/>
+                    <rect x="22" y="166" width="216" height="58" rx="10" fill="#0b1120" fill-opacity="0.94" stroke="#facc15" stroke-width="1.6"/>
+                    <text x="130" y="191" text-anchor="middle" fill="#fde047" font-size="15.5" font-weight="700">Posición del Sol</text>
                     <text x="130" y="212" text-anchor="middle" fill="#e2e8f0" font-size="13.5">A ~8 kpc del centro</text>
                   </g>
 
@@ -239,12 +239,12 @@
                     <text x="806" y="200" text-anchor="middle" fill="#e2e8f0" font-size="13.5">Chimeneas de supernovas</text>
                   </g>
 
-                  <!-- Etiqueta 5: Centro Galáctico Sgr A* (Abajo Derecha) -->
+                  <!-- Etiqueta 5: Centro Galáctico Sgr A* (Abajo Derecha) en verde -->
                   <g class="diagram-hotspot" data-info="center">
-                    <polyline points="492,268 660,338 674,338" fill="none" stroke="#facc15" stroke-width="1.8"/>
-                    <circle cx="492" cy="268" r="4" fill="#facc15"/>
-                    <rect x="674" y="308" width="264" height="58" rx="10" fill="#0b1120" fill-opacity="0.94" stroke="#facc15" stroke-width="1.6"/>
-                    <text x="806" y="333" text-anchor="middle" fill="#fde047" font-size="15.5" font-weight="700">Centro Galáctico (Sgr A*)</text>
+                    <polyline points="492,268 660,338 674,338" fill="none" stroke="#4ade80" stroke-width="1.8"/>
+                    <circle cx="492" cy="268" r="4" fill="#4ade80"/>
+                    <rect x="674" y="308" width="264" height="58" rx="10" fill="#0b1120" fill-opacity="0.94" stroke="#4ade80" stroke-width="1.6"/>
+                    <text x="806" y="333" text-anchor="middle" fill="#86efac" font-size="15.5" font-weight="700">Centro Galáctico (Sgr A*)</text>
                     <text x="806" y="354" text-anchor="middle" fill="#e2e8f0" font-size="13.5">Motor de la explosión central</text>
                   </g>
                 </svg>
@@ -327,7 +327,6 @@
             <!-- *Gráficas del estudio de cada simulación -->
             <div class="editorial-figure-block" id="simViewer">
               <div class="editorial-figure-header">
-                <span class="figure-label">Gráficas del estudio de cada simulación</span>
                 <h3>Evolución de la temperatura del gas en la Vía Láctea (17, 33 y 50 millones de años)</h3>
                 <div class="toggle-buttons" role="tablist" aria-label="Seleccionar simulación">
                   <button class="sim-tab active" data-target="panel-di" role="tab" aria-selected="true">
@@ -374,7 +373,6 @@
             <!-- *Figura 3 del artículo -->
             <figure class="editorial-figure-block">
               <div class="editorial-figure-header">
-                <span class="figure-label">Figura 3 del artículo</span>
                 <h3>Mapa de brillo superficial en rayos X visto desde la posición del Sol</h3>
               </div>
               <div class="img-zoom-container">
@@ -419,9 +417,6 @@
             <p>
               Mientras tanto, la Vía Láctea sigue guardando su secreto: hace unos 20 o 30 millones de años, algo en su centro, ya sea un agujero negro hambriento o una explosión de estrellas, sopló con la fuerza suficiente para inflar las burbujas más grandes que conocemos en nuestra galaxia. Y nosotros, desde un rincón tranquilo del disco, apenas estamos empezando a entender qué pasó.
             </p>
-            <p class="article-source-line">
-              <strong>Fuente:</strong> Bisht, M. S. &amp; Sarkar, K. C. (2026), <em>“Can the ∼5 kpc starburst ring in MW create eROSITA bubbles?”</em>, <a href="https://arxiv.org/abs/2610.40049" target="_blank" rel="noopener noreferrer">arXiv:2610.40049</a>.
-            </p>
           </section>
 
         </div>
@@ -437,7 +432,6 @@
       </div>
       <div class="footer-links">
         <a href="#el-misterio">Volver arriba</a>
-        <a href="https://github.com/Juan-Pablo-Montenegro/Pagina_Comunicacion" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a>
       </div>
     </div>
   </footer>

@@ -612,39 +612,50 @@ code {
   text-decoration: underline;
 }
 
-/* Inline Segmented Tab Controls for Simulation Figures */
+/* High-Contrast Side-by-Side Buttons for Simulation Figures (No Outer Box) */
 .toggle-buttons {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
-  padding: 0.25rem;
-  background: var(--bg-secondary);
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  margin-top: 0.95rem;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 .sim-tab {
-  background: transparent;
-  color: var(--text-muted);
-  border: none;
-  padding: 0.45rem 0.95rem;
-  border-radius: 7px;
-  font-size: 0.85rem;
+  flex: 1 1 0;
+  background: rgba(251, 146, 60, 0.08);
+  color: var(--text-primary);
+  border: 1.5px solid rgba(251, 146, 60, 0.75);
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.2s;
+  text-align: center;
+  transition: all 0.18s ease;
 }
 
 .sim-tab:hover {
-  color: var(--text-primary);
+  background: rgba(251, 146, 60, 0.2);
+  border-color: var(--accent-orange);
+  transform: translateY(-1px);
 }
 
 .sim-tab.active {
   background: var(--accent-orange);
   color: #090d16;
+  border-color: var(--accent-orange);
   font-weight: 700;
+  box-shadow: 0 4px 16px rgba(251, 146, 60, 0.35);
+}
+
+@media (max-width: 640px) {
+  .toggle-buttons {
+    flex-wrap: wrap;
+  }
 }
 
 .sim-panel {
