@@ -18,7 +18,14 @@
   <header class="site-header">
     <div class="container nav-container">
       <a href="#" class="brand">
-        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+            <ellipse cx="12" cy="6" rx="5" ry="4" stroke-dasharray="2 2"/>
+            <ellipse cx="12" cy="18" rx="5" ry="4" stroke-dasharray="2 2"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+          </svg>
+        </span>
         <span class="brand-name">Cosmos en Claro</span>
         <span class="brand-tag">Divulgación Científica</span>
       </a>
@@ -30,7 +37,19 @@
         <a href="#glosario">Glosario</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar modo de lectura">
-        <span class="theme-icon" id="themeIcon">☀️</span>
+        <span class="theme-icon" id="themeIcon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </span>
         <span class="theme-label" id="themeLabel">Modo Claro</span>
       </button>
     </div>
@@ -38,44 +57,66 @@
 
   <main>
     <article class="blog-article">
-      <!-- HERO DEL ARTÍCULO -->
+      <!-- HERO DEL ARTÍCULO CON CALLOUT LATERAL DERECHO -->
       <header class="article-hero">
         <div class="hero-backdrop" aria-hidden="true">
           <div class="bubble-glow bubble-north"></div>
           <div class="bubble-glow bubble-south"></div>
         </div>
-        <div class="container hero-content">
-          <div class="article-badges">
-            <span class="badge badge-category">Astrofísica Galáctica</span>
-            <span class="badge badge-source">Basado en Bisht &amp; Sarkar (2026)</span>
-            <span class="badge badge-time">⏱ 5 min de lectura</span>
-          </div>
-          <h1 class="article-title">
-            El verdadero origen de las <em>burbujas gigantes</em> de la Vía Láctea
-          </h1>
-          <p class="article-subtitle">
-            Dos estructuras colosales de gas ardiente se alzan por encima y por debajo de nuestra galaxia como un reloj de arena cósmico. Algunos astrónomos pensaron que eran una ilusión óptica causada por un anillo de estrellas cercano. Una nueva simulación en 3D acaba de resolver el misterio.
-          </p>
-          <div class="article-meta">
-            <div class="author-info">
-              <div class="author-avatars" aria-hidden="true">
-                <div class="author-avatar">JP</div>
-                <div class="author-avatar avatar-secondary">JR</div>
-              </div>
-              <div>
-                <div class="author-name">Por <strong>Juan Pablo Montenegro Erazo</strong> y <strong>Juliana Ruiz Montoya</strong></div>
-                <div class="article-date">Divulgación Científica • Basado en el estudio de M. S. Bisht y K. C. Sarkar (Octubre 2026)</div>
+        <div class="container hero-grid">
+          <div class="hero-main">
+            <div class="article-badges">
+              <span class="badge badge-category">Astrofísica Galáctica</span>
+              <span class="badge badge-reading-blue">10 min de lectura</span>
+            </div>
+            <h1 class="article-title">
+              El verdadero origen de las <em>burbujas gigantes</em> de la Vía Láctea
+            </h1>
+            <p class="article-subtitle">
+              Dos estructuras colosales de gas ardiente se alzan por encima y por debajo de nuestra galaxia como un reloj de arena cósmico. Algunos astrónomos pensaron que eran una ilusión óptica causada por un anillo de estrellas cercano. Una nueva simulación en 3D acaba de resolver el misterio.
+            </p>
+            <div class="article-meta">
+              <div class="author-info">
+                <div class="author-avatars" aria-hidden="true">
+                  <div class="author-avatar">JP</div>
+                  <div class="author-avatar avatar-secondary">JR</div>
+                </div>
+                <div>
+                  <div class="author-name">Por <strong>Juan Pablo Montenegro Erazo</strong> y <strong>Juliana Ruiz Montoya</strong></div>
+                  <div class="article-date">Comunicación Científica • Estudio de M. S. Bisht y K. C. Sarkar (Octubre 2026)</div>
+                </div>
               </div>
             </div>
-            <div class="paper-reference-pill">
-              <span>📄 Artículo original:</span>
-              <a href="https://arxiv.org/abs/2610.40049" target="_blank" rel="noopener noreferrer">arXiv:2610.40049v1 ↗</a>
-            </div>
           </div>
+
+          <!-- Callout lateral derecho con diseño distintivo -->
+          <aside class="hero-paper-spotlight" aria-label="Enlace al artículo científico original">
+            <div class="spotlight-orbit-ring" aria-hidden="true"></div>
+            <div class="spotlight-header">
+              <span class="spotlight-kicker">Publicación de referencia</span>
+              <span class="spotlight-code">arXiv:2610.40049v1</span>
+            </div>
+            <h2 class="spotlight-title">
+              «Can the ~ 5 kpc starburst ring in MW create eROSITA bubbles?»
+            </h2>
+            <p class="spotlight-authors">
+              Mukesh Singh Bisht &amp; Kartick C. Sarkar
+            </p>
+            <p class="spotlight-inst">
+              National Tsing Hua University &amp; Raman Research Institute
+            </p>
+            <a class="spotlight-cta" href="https://arxiv.org/abs/2610.40049" target="_blank" rel="noopener noreferrer">
+              <span>Consultar artículo original</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path d="M7 17L17 7"/>
+                <path d="M7 7h10v10"/>
+              </svg>
+            </a>
+          </aside>
         </div>
       </header>
 
-      <!-- CUERPO DE LA ENTRADA DE BLOG (COLUMNA CENTRADA Y LIMPIA) -->
+      <!-- CUERPO DE LA ENTRADA DE BLOG -->
       <div class="container article-container">
         <div class="article-body">
 
@@ -88,86 +129,151 @@
               No es ciencia ficción: esas estructuras existen de verdad. En 2010, el telescopio espacial Fermi descubrió dos enormes lóbulos de rayos gamma llamados <strong>Burbujas de Fermi</strong>. Diez años después, en 2020, el telescopio espacial de rayos X <strong>eROSITA</strong> reveló algo aún más grande: un par de gigantescas envolturas de gas caliente en rayos X —bautizadas como las <strong>Burbujas de eROSITA (eRBs)</strong>— que rodean por completo a las de Fermi y se extienden hasta abarcar unos 80 grados en el cielo.
             </p>
 
-            <!-- DIAGRAMA INTERACTIVO ANATOMÍA GALÁCTICA -->
+            <!-- DIAGRAMA INTERACTIVO ANATOMÍA GALÁCTICA CON FONDO DE LA VÍA LÁCTEA -->
             <div class="interactive-diagram-card">
               <div class="diagram-header">
-                <h4>🌌 Esquema conceptual: ¿Qué estamos mirando en la Vía Láctea?</h4>
-                <p>Pasa el cursor o toca cada elemento para conocer las piezas del rompecabezas.</p>
+                <h4>Esquema conceptual: ¿Qué estamos mirando en la Vía Láctea?</h4>
+                <p>Pasa el cursor o selecciona cada estructura o etiqueta para explorar su papel y comparar su escala frente al disco estelar de nuestra galaxia.</p>
               </div>
               <div class="galaxy-svg-wrapper">
-                <svg viewBox="0 0 800 440" class="galaxy-diagram" role="img" aria-label="Diagrama de la Vía Láctea mostrando las burbujas de eROSITA, las burbujas de Fermi, el Centro Galáctico, el anillo de 5 kpc y la posición del Sol">
+                <svg viewBox="0 0 960 520" class="galaxy-diagram" role="img" aria-label="Diagrama de la Vía Láctea con fondo estelar mostrando la escala de las burbujas de eROSITA, las burbujas de Fermi, el Centro Galáctico, el anillo de 5 kpc y la posición del Sol">
                   <defs>
                     <radialGradient id="erositaGrad" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
-                      <stop offset="75%" stop-color="#ea580c" stop-opacity="0.18"/>
-                      <stop offset="100%" stop-color="#fb923c" stop-opacity="0.6"/>
+                      <stop offset="0%" stop-color="#f97316" stop-opacity="0.32"/>
+                      <stop offset="70%" stop-color="#ea580c" stop-opacity="0.18"/>
+                      <stop offset="100%" stop-color="#fb923c" stop-opacity="0.58"/>
                     </radialGradient>
                     <radialGradient id="fermiGrad" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5"/>
-                      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.25"/>
+                      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.48"/>
+                      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.24"/>
                     </radialGradient>
                     <linearGradient id="diskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-                      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.7"/>
-                      <stop offset="50%" stop-color="#fef08a" stop-opacity="1"/>
-                      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                      <stop offset="18%" stop-color="#38bdf8" stop-opacity="0.65"/>
+                      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.95"/>
+                      <stop offset="82%" stop-color="#38bdf8" stop-opacity="0.65"/>
                       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
                     </linearGradient>
+                    <radialGradient id="bgVignette" cx="50%" cy="50%" r="55%">
+                      <stop offset="0%" stop-color="#060913" stop-opacity="0.25"/>
+                      <stop offset="75%" stop-color="#060913" stop-opacity="0.58"/>
+                      <stop offset="100%" stop-color="#060913" stop-opacity="0.92"/>
+                    </radialGradient>
                   </defs>
 
-                  <rect width="800" height="440" rx="16" fill="#090d1a"/>
+                  <!-- Fondo base oscuro -->
+                  <rect width="960" height="520" rx="16" fill="#060913"/>
 
-                  <!-- Burbujas de eROSITA (Exterior - Rayos X) -->
+                  <!-- Imagen de fondo de la Vía Láctea con transparencia controlada para dar escala -->
+                  <image href="assets/images/milky_way_bg.jpg" x="0" y="0" width="960" height="520" preserveAspectRatio="xMidYMid slice" opacity="0.45"/>
+
+                  <!-- Viñeta suave para garantizar que el esquema destaque sobre el fondo -->
+                  <rect width="960" height="520" rx="16" fill="url(#bgVignette)"/>
+
+                  <!-- Escala de referencia sutil -->
+                  <g opacity="0.55">
+                    <line x1="480" y1="485" x2="610" y2="485" stroke="#94a3b8" stroke-width="1.5"/>
+                    <line x1="480" y1="480" x2="480" y2="490" stroke="#94a3b8" stroke-width="1.5"/>
+                    <line x1="610" y1="480" x2="610" y2="490" stroke="#94a3b8" stroke-width="1.5"/>
+                    <text x="545" y="502" text-anchor="middle" fill="#cbd5e1" font-size="11" font-weight="500">Escala: ~5 kpc (~16.300 años luz)</text>
+                  </g>
+
+                  <!-- 1. Burbujas de eROSITA (Exterior - Rayos X) -->
                   <g class="diagram-hotspot" data-info="erosita">
-                    <ellipse cx="400" cy="115" rx="135" ry="95" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2" stroke-dasharray="6,3"/>
-                    <ellipse cx="400" cy="325" rx="135" ry="95" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2" stroke-dasharray="6,3"/>
+                    <ellipse cx="480" cy="135" rx="145" ry="108" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2.2" stroke-dasharray="7,4"/>
+                    <ellipse cx="480" cy="385" rx="145" ry="108" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2.2" stroke-dasharray="7,4"/>
                   </g>
 
-                  <!-- Burbujas de Fermi (Interior - Rayos Gamma) -->
+                  <!-- 2. Burbujas de Fermi (Interior - Rayos Gamma) -->
                   <g class="diagram-hotspot" data-info="fermi">
-                    <ellipse cx="400" cy="135" rx="82" ry="72" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="1.8"/>
-                    <ellipse cx="400" cy="305" rx="82" ry="72" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="1.8"/>
+                    <ellipse cx="480" cy="162" rx="86" ry="78" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="2"/>
+                    <ellipse cx="480" cy="358" rx="86" ry="78" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="2"/>
                   </g>
 
-                  <!-- Chimeneas del anillo de 5 kpc (hipótesis alternativa) -->
+                  <!-- 3. Chimeneas del anillo de 5 kpc (hipótesis alternativa) -->
                   <g class="diagram-hotspot" data-info="ring">
-                    <path d="M 270 212 Q 255 150 285 110" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="4,4"/>
-                    <path d="M 530 212 Q 545 150 515 110" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="4,4"/>
-                    <circle cx="270" cy="220" r="10" fill="#06b6d4" stroke="#cffafe" stroke-width="2"/>
-                    <circle cx="530" cy="220" r="10" fill="#06b6d4" stroke="#cffafe" stroke-width="2"/>
+                    <path d="M 350 252 Q 332 185 362 128" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="5,4"/>
+                    <path d="M 610 252 Q 628 185 598 128" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="5,4"/>
+                    <path d="M 350 268 Q 332 335 362 392" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.65"/>
+                    <path d="M 610 268 Q 628 335 598 392" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="5,4" opacity="0.65"/>
                   </g>
 
-                  <!-- Disco de la Vía Láctea -->
-                  <rect x="60" y="213" width="680" height="14" rx="7" fill="url(#diskGrad)"/>
+                  <!-- Disco luminoso esquemático de la Vía Láctea -->
+                  <rect x="110" y="254" width="740" height="12" rx="6" fill="url(#diskGrad)"/>
 
-                  <!-- Centro Galáctico (Sgr A*) -->
+                  <!-- Nodos del Anillo de 5 kpc sobre el disco -->
+                  <g class="diagram-hotspot" data-info="ring">
+                    <circle cx="350" cy="260" r="9.5" fill="#06b6d4" stroke="#cffafe" stroke-width="2.2"/>
+                    <circle cx="610" cy="260" r="9.5" fill="#06b6d4" stroke="#cffafe" stroke-width="2.2"/>
+                  </g>
+
+                  <!-- 4. Centro Galáctico (Sgr A*) -->
                   <g class="diagram-hotspot" data-info="center">
-                    <circle cx="400" cy="220" r="14" fill="#facc15" stroke="#fef9c3" stroke-width="3"/>
+                    <circle cx="480" cy="260" r="13" fill="#facc15" stroke="#fef9c3" stroke-width="3"/>
                   </g>
 
-                  <!-- Posición del Sol -->
+                  <!-- 5. Posición del Sol (~8 kpc) y líneas de visión -->
                   <g class="diagram-hotspot" data-info="sun">
-                    <circle cx="195" cy="220" r="8" fill="#4ade80" stroke="#dcfce7" stroke-width="2"/>
-                    <line x1="195" y1="220" x2="340" y2="85" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
-                    <line x1="195" y1="220" x2="340" y2="355" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+                    <line x1="255" y1="260" x2="415" y2="95" stroke="#4ade80" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+                    <line x1="255" y1="260" x2="415" y2="425" stroke="#4ade80" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+                    <circle cx="255" cy="260" r="8.5" fill="#4ade80" stroke="#dcfce7" stroke-width="2.2"/>
                   </g>
 
-                  <!-- Etiquetas -->
-                  <text x="400" y="42" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700">Burbujas de eROSITA (Rayos X, ~80°)</text>
-                  <text x="400" y="138" text-anchor="middle" fill="#e9d5ff" font-size="12" font-weight="600">Burbujas de Fermi (Rayos γ)</text>
-                  <text x="400" y="252" text-anchor="middle" fill="#fde047" font-size="12" font-weight="700">Centro Galáctico (Sgr A*)</text>
-                  <text x="270" y="252" text-anchor="middle" fill="#67e8f9" font-size="11" font-weight="600">Anillo ~5 kpc</text>
-                  <text x="530" y="252" text-anchor="middle" fill="#67e8f9" font-size="11" font-weight="600">Anillo ~5 kpc</text>
-                  <text x="165" y="198" text-anchor="middle" fill="#86efac" font-size="12" font-weight="700">☀️ El Sol (~8 kpc)</text>
+                  <!-- ETIQUETAS EXTERNAS CON LÍNEAS GUÍA (SIN SOLAPAMIENTO) -->
+
+                  <!-- Etiqueta 1: Burbujas de eROSITA (Arriba Derecha) -->
+                  <g class="diagram-hotspot" data-info="erosita">
+                    <polyline points="595,82 665,55 685,55" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+                    <circle cx="595" cy="82" r="3.5" fill="#fb923c"/>
+                    <rect x="685" y="34" width="245" height="42" rx="8" fill="#0b1120" fill-opacity="0.92" stroke="#fb923c" stroke-width="1.4"/>
+                    <text x="807" y="53" text-anchor="middle" fill="#fdba74" font-size="12.5" font-weight="700">Burbujas de eROSITA</text>
+                    <text x="807" y="69" text-anchor="middle" fill="#cbd5e1" font-size="11">Rayos X • ~80° de extensión</text>
+                  </g>
+
+                  <!-- Etiqueta 2: Burbujas de Fermi (Arriba Izquierda) -->
+                  <g class="diagram-hotspot" data-info="fermi">
+                    <polyline points="402,135 285,85 265,85" fill="none" stroke="#c084fc" stroke-width="1.6"/>
+                    <circle cx="402" cy="135" r="3.5" fill="#c084fc"/>
+                    <rect x="30" y="64" width="235" height="42" rx="8" fill="#0b1120" fill-opacity="0.92" stroke="#c084fc" stroke-width="1.4"/>
+                    <text x="147" y="83" text-anchor="middle" fill="#e9d5ff" font-size="12.5" font-weight="700">Burbujas de Fermi</text>
+                    <text x="147" y="99" text-anchor="middle" fill="#cbd5e1" font-size="11">Rayos gamma (γ) • |b| ≤ 50°</text>
+                  </g>
+
+                  <!-- Etiqueta 3: Posición del Sol (Izquierda Media) -->
+                  <g class="diagram-hotspot" data-info="sun">
+                    <polyline points="255,250 215,195 195,195" fill="none" stroke="#4ade80" stroke-width="1.6"/>
+                    <circle cx="255" cy="250" r="3.5" fill="#4ade80"/>
+                    <rect x="25" y="174" width="170" height="42" rx="8" fill="#0b1120" fill-opacity="0.92" stroke="#4ade80" stroke-width="1.4"/>
+                    <text x="110" y="193" text-anchor="middle" fill="#86efac" font-size="12.5" font-weight="700">Posición del Sol</text>
+                    <text x="110" y="209" text-anchor="middle" fill="#cbd5e1" font-size="11">A ~8 kpc del centro</text>
+                  </g>
+
+                  <!-- Etiqueta 4: Anillo Estelar ~5 kpc (Derecha Media-Alta) -->
+                  <g class="diagram-hotspot" data-info="ring">
+                    <polyline points="615,248 680,185 700,185" fill="none" stroke="#22d3ee" stroke-width="1.6"/>
+                    <circle cx="615" cy="248" r="3.5" fill="#22d3ee"/>
+                    <rect x="700" y="164" width="235" height="42" rx="8" fill="#0b1120" fill-opacity="0.92" stroke="#22d3ee" stroke-width="1.4"/>
+                    <text x="817" y="183" text-anchor="middle" fill="#67e8f9" font-size="12.5" font-weight="700">Anillo estelar (~5 kpc)</text>
+                    <text x="817" y="199" text-anchor="middle" fill="#cbd5e1" font-size="11">Chimeneas de supernovas</text>
+                  </g>
+
+                  <!-- Etiqueta 5: Centro Galáctico Sgr A* (Abajo Derecha) -->
+                  <g class="diagram-hotspot" data-info="center">
+                    <polyline points="492,268 680,335 700,335" fill="none" stroke="#facc15" stroke-width="1.6"/>
+                    <circle cx="492" cy="268" r="3.5" fill="#facc15"/>
+                    <rect x="700" y="314" width="235" height="42" rx="8" fill="#0b1120" fill-opacity="0.92" stroke="#facc15" stroke-width="1.4"/>
+                    <text x="817" y="333" text-anchor="middle" fill="#fde047" font-size="12.5" font-weight="700">Centro Galáctico (Sgr A*)</text>
+                    <text x="817" y="349" text-anchor="middle" fill="#cbd5e1" font-size="11">Motor de la explosión central</text>
+                  </g>
                 </svg>
               </div>
               <div class="diagram-info-box" id="diagramInfoBox">
-                <strong>💡 Explora el esquema:</strong> Haz clic o pasa el cursor sobre el <em>Centro Galáctico</em>, el <em>Anillo de ~5 kpc</em>, las <em>Burbujas de eROSITA</em> o <em>El Sol</em> para ver cómo influyen en el misterio.
+                <strong>Explora el esquema:</strong> Haz clic o pasa el cursor sobre el <em>Centro Galáctico</em>, el <em>Anillo estelar (~5 kpc)</em>, las <em>Burbujas de eROSITA</em>, las <em>Burbujas de Fermi</em> o la <em>Posición del Sol</em> para ver cómo influyen en el misterio.
               </div>
             </div>
           </section>
 
-          <!-- SECCIÓN 2: LOS DOS SOSPECHOSOS -->
+          <!-- SECCIÓN 2: LOS DOS SOSPECHOSOS (CON ILUSTRACIONES VECTORIALES DE APOYO) -->
           <section id="los-sospechosos" class="content-section">
             <h2>Dos sospechosos para un mismo misterio cósmico</h2>
             <p>
@@ -179,16 +285,46 @@
 
             <div class="suspects-grid">
               <div class="suspect-card suspect-central">
+                <div class="suspect-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 180 90" width="100%" height="84">
+                    <rect width="180" height="90" rx="10" fill="#0b1120"/>
+                    <!-- Lóbulos bipolares desde el centro -->
+                    <ellipse cx="90" cy="24" rx="28" ry="18" fill="rgba(251, 146, 60, 0.28)" stroke="#fb923c" stroke-width="1.6"/>
+                    <ellipse cx="90" cy="66" rx="28" ry="18" fill="rgba(251, 146, 60, 0.28)" stroke="#fb923c" stroke-width="1.6"/>
+                    <!-- Flechas de flujo central -->
+                    <path d="M90 42 L90 14 M85 19 L90 13 L95 19" stroke="#fde047" stroke-width="1.6" fill="none"/>
+                    <path d="M90 48 L90 76 M85 71 L90 77 L95 71" stroke="#fde047" stroke-width="1.6" fill="none"/>
+                    <!-- Disco galáctico -->
+                    <rect x="20" y="43" width="140" height="4" rx="2" fill="#38bdf8"/>
+                    <circle cx="90" cy="45" r="6" fill="#facc15"/>
+                  </svg>
+                </div>
                 <div class="suspect-tag">Hipótesis 1 • El Motor Central</div>
-                <h3>🌋 Una explosión en el corazón de la Vía Láctea</h3>
+                <h3>Una explosión en el corazón de la Vía Láctea</h3>
                 <p>
                   Las burbujas nacieron hace decenas de millones de años directamente en el <strong>Centro Galáctico</strong> (a unos 8 <span class="glossary-term" data-tooltip="1 kilopársec (kpc) equivale a unos 3.260 años luz. El centro de la Vía Láctea está a unos 8 kpc (~26.000 años luz) de la Tierra.">kilopársecs (kpc)</span> de nosotros). El responsable habría sido un despertar violento de nuestro agujero negro supermasivo, <strong>Sagitario A*</strong>, o un estallido concentrado de supernovas en el núcleo que lanzó una onda de choque hacia ambos hemisferios.
                 </p>
               </div>
 
               <div class="suspect-card suspect-ring">
+                <div class="suspect-illustration" aria-hidden="true">
+                  <svg viewBox="0 0 180 90" width="100%" height="84">
+                    <rect width="180" height="90" rx="10" fill="#0b1120"/>
+                    <!-- Chimeneas laterales desde el anillo -->
+                    <path d="M 55 43 Q 48 22 60 10" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-dasharray="3,2"/>
+                    <path d="M 125 43 Q 132 22 120 10" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-dasharray="3,2"/>
+                    <path d="M 55 47 Q 48 68 60 80" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-dasharray="3,2"/>
+                    <path d="M 125 47 Q 132 68 120 80" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-dasharray="3,2"/>
+                    <ellipse cx="56" cy="24" rx="14" ry="12" fill="rgba(34, 211, 238, 0.2)" stroke="none"/>
+                    <ellipse cx="124" cy="24" rx="14" ry="12" fill="rgba(34, 211, 238, 0.2)" stroke="none"/>
+                    <!-- Disco galáctico -->
+                    <rect x="20" y="43" width="140" height="4" rx="2" fill="#38bdf8"/>
+                    <circle cx="55" cy="45" r="5" fill="#06b6d4" stroke="#cffafe" stroke-width="1.5"/>
+                    <circle cx="125" cy="45" r="5" fill="#06b6d4" stroke="#cffafe" stroke-width="1.5"/>
+                  </svg>
+                </div>
                 <div class="suspect-tag">Hipótesis 2 • El Espejismo del Anillo</div>
-                <h3>🔥 Un anillo de estrellas a mitad de camino</h3>
+                <h3>Un anillo de estrellas a mitad de camino</h3>
                 <p>
                   En 2024, varios investigadores (como Zhang et al. y Churazov et al.) propusieron otra idea: ¿y si el Centro Galáctico no tuvo nada que ver? En nuestra galaxia, la mayor fábrica de estrellas está en un <strong>anillo situado a unos 4–5 kpc del centro</strong>. Sugirieron que las supernovas de ese anillo elevan columnas de gas caliente («chimeneas») que, vistas desde el Sol, se superponen y crean la ilusión de dos burbujas gigantes.
                 </p>
@@ -224,13 +360,13 @@
                 </div>
                 <div class="toggle-buttons" role="tablist" aria-label="Seleccionar simulación">
                   <button class="sim-tab active" data-target="panel-di" role="tab" aria-selected="true">
-                    1️⃣ Solo Anillo ~5 kpc (Fig. 1: DI)
+                    Escenario 1: Solo Anillo ~5 kpc (Fig. 1: DI)
                   </button>
                   <button class="sim-tab" data-target="panel-dici" role="tab" aria-selected="false">
-                    2️⃣ Anillo + Centro Galáctico (Fig. 2: DI+CI)
+                    Escenario 2: Anillo + Centro Galáctico (Fig. 2: DI+CI)
                   </button>
                   <button class="sim-tab" data-target="panel-both" role="tab" aria-selected="false">
-                    ⚖️ Comparar ambas
+                    Comparar ambas gráficas
                   </button>
                 </div>
               </div>
@@ -261,7 +397,7 @@
               </div>
 
               <div class="reading-guide-box">
-                <h5>🔍 ¿Cómo leer los colores de estas gráficas?</h5>
+                <h5>Guía rápida: ¿Cómo leer los colores de estas gráficas?</h5>
                 <p>
                   La barra superior muestra el logaritmo de la temperatura en Kelvin (log<sub>10</sub> <em>T</em>). El <strong>azul/verde</strong> (10<sup>4</sup>–10<sup>6</sup> K) es gas tibio o del halo; el <strong>amarillo/naranja</strong> (~5 × 10<sup>6</sup> K) es gas comprimido por ondas de choque (el que más brilla en los rayos X que detecta eROSITA); y el <strong>rojo oscuro</strong> (10<sup>7</sup>–10<sup>8</sup> K, hasta 100 millones de grados) es gas ultracaliente pero tan poco denso que resulta casi transparente en rayos X blandos.
                 </p>
@@ -294,15 +430,15 @@
               </div>
               <div class="comparison-annotations">
                 <div class="annotation-col annotation-left">
-                  <span class="annotation-pill pill-fail">❌ Panel Izquierdo: Solo Anillo de ~5 kpc (DI)</span>
+                  <span class="annotation-pill pill-fail">Panel Izquierdo: Solo Anillo de ~5 kpc (DI)</span>
                   <p>
                     <strong>Sin rastro de las burbujas gigantes.</strong> Solo se observan arcos pequeños y desordenados cerca del plano central (entre −30° y +30° de latitud). El anillo de estrellas es incapaz de inflar estructuras coherentes hacia los polos galácticos.
                   </p>
                 </div>
                 <div class="annotation-col annotation-right">
-                  <span class="annotation-pill pill-success">✅ Panel Derecho: Anillo + Centro Galáctico (DI+CI)</span>
+                  <span class="annotation-pill pill-success">Panel Derecho: Anillo + Centro Galáctico (DI+CI)</span>
                   <p>
-                    <strong>¡Aparecen las Burbujas de eROSITA!</strong> Dos lóbulos colosales y coherentes de <strong>~80° de tamaño</strong> emergen hacia arriba y hacia abajo del centro (0°), con el brillo y el borde afilado que observan los telescopios reales.
+                    <strong>Aparecen las Burbujas de eROSITA.</strong> Dos lóbulos colosales y coherentes de <strong>~80° de tamaño</strong> emergen hacia arriba y hacia abajo del centro (0°), con el brillo y el borde afilado que observan los telescopios reales.
                   </p>
                 </div>
               </div>
@@ -318,7 +454,27 @@
 
             <div class="stress-tests-grid">
               <div class="test-card">
-                <div class="test-icon">🧭</div>
+                <div class="test-illustration" aria-hidden="true">
+                  <!-- Ilustración SVG: 12 posiciones orbitales del Sol -->
+                  <svg viewBox="0 0 120 72" width="100%" height="68">
+                    <rect width="120" height="72" rx="8" fill="#0b1120"/>
+                    <circle cx="60" cy="36" r="24" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3,3"/>
+                    <circle cx="60" cy="36" r="5" fill="#facc15"/>
+                    <!-- 12 puntos solares cada 30 grados -->
+                    <circle cx="60" cy="12" r="2.5" fill="#4ade80"/>
+                    <circle cx="72" cy="15" r="2.5" fill="#4ade80"/>
+                    <circle cx="81" cy="24" r="2.5" fill="#4ade80"/>
+                    <circle cx="84" cy="36" r="2.5" fill="#4ade80"/>
+                    <circle cx="81" cy="48" r="2.5" fill="#4ade80"/>
+                    <circle cx="72" cy="57" r="2.5" fill="#4ade80"/>
+                    <circle cx="60" cy="60" r="2.5" fill="#94a3b8"/>
+                    <circle cx="48" cy="57" r="2.5" fill="#94a3b8"/>
+                    <circle cx="39" cy="48" r="2.5" fill="#94a3b8"/>
+                    <circle cx="36" cy="36" r="2.5" fill="#94a3b8"/>
+                    <circle cx="39" cy="24" r="2.5" fill="#94a3b8"/>
+                    <circle cx="48" cy="15" r="2.5" fill="#94a3b8"/>
+                  </svg>
+                </div>
                 <h4>1. ¿Y si el Sol estuviera en otro ángulo?</h4>
                 <p>
                   Probaron <strong>12 posiciones distintas para el Sol</strong> alrededor de la galaxia (cada 30°). En el modelo de solo anillo (<code>DI</code>), las burbujas no aparecieron desde <strong>ningún ángulo (0 de 12)</strong>. En cambio, con inyección central (<code>DI+CI</code>), las burbujas son visibles desde el 50% de las ubicaciones solares (<em>φ</em> = 120° a 270°).
@@ -326,7 +482,16 @@
               </div>
 
               <div class="test-card">
-                <div class="test-icon">⚛️</div>
+                <div class="test-illustration" aria-hidden="true">
+                  <!-- Ilustración SVG: Enriquecimiento de metales x10 -->
+                  <svg viewBox="0 0 120 72" width="100%" height="68">
+                    <rect width="120" height="72" rx="8" fill="#0b1120"/>
+                    <ellipse cx="60" cy="36" rx="28" ry="11" fill="none" stroke="#c084fc" stroke-width="1.4" transform="rotate(-25 60 36)"/>
+                    <ellipse cx="60" cy="36" rx="28" ry="11" fill="none" stroke="#38bdf8" stroke-width="1.4" transform="rotate(25 60 36)"/>
+                    <circle cx="60" cy="36" r="5" fill="#fb923c"/>
+                    <text x="96" y="24" fill="#fdba74" font-size="11" font-weight="700">10× Z☉</text>
+                  </svg>
+                </div>
                 <h4>2. ¿Y si el gas tuviera 10 veces más metales?</h4>
                 <p>
                   Quienes defendían la hipótesis del anillo sugerían que una alta <span class="glossary-term" data-tooltip="En astronomía, se llama «metales» a todos los elementos químicos más pesados que el hidrógeno y el helio (como oxígeno, hierro o neón). Más metales hacen que el gas emita más rayos X.">metalicidad</span> haría brillar las chimeneas. Los autores multiplicaron por <strong>10 veces</strong> los metales del gas inyectado, y aun así no se formaron las burbujas.
@@ -334,7 +499,15 @@
               </div>
 
               <div class="test-card">
-                <div class="test-icon">📡</div>
+                <div class="test-illustration" aria-hidden="true">
+                  <!-- Ilustración SVG: Bandas espectrales de rayos X -->
+                  <svg viewBox="0 0 120 72" width="100%" height="68">
+                    <rect width="120" height="72" rx="8" fill="#0b1120"/>
+                    <path d="M 14 48 Q 24 18, 34 48 T 54 48 T 74 48 T 94 48 T 106 48" fill="none" stroke="#fb923c" stroke-width="1.8"/>
+                    <path d="M 14 36 Q 20 22, 26 36 T 38 36 T 50 36 T 62 36 T 74 36 T 86 36 T 98 36 T 106 36" fill="none" stroke="#38bdf8" stroke-width="1.4" opacity="0.8"/>
+                    <text x="60" y="63" text-anchor="middle" fill="#94a3b8" font-size="9.5" font-weight="600">Bandas R1 • R2 • R4 • R5 • R6</text>
+                  </svg>
+                </div>
                 <h4>3. ¿Y si miramos en otras frecuencias de rayos X?</h4>
                 <p>
                   Generaron mapas sintéticos en otras cuatro bandas de energía de rayos X (bandas R1, R2, R5 y R6). En ninguna de ellas el anillo de 5 kpc logró crear estructuras parecidas a las de eROSITA.
@@ -355,7 +528,7 @@
 
           <!-- SECCIÓN INFERIOR: GLOSARIO -->
           <section id="glosario" class="content-section bottom-glossary-section">
-            <h2>📖 Glosario para explorar el artículo</h2>
+            <h2>Glosario para explorar el artículo</h2>
             <p class="glossary-intro">Conceptos clave explicados de forma sencilla para acompañar la lectura:</p>
             <div class="bottom-glossary-grid">
               <div class="glossary-item">
@@ -393,12 +566,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>✦ Cosmos en Claro</strong> — Por <strong>Juan Pablo Montenegro Erazo</strong> y <strong>Juliana Ruiz Montoya</strong>.
+        <strong>Cosmos en Claro</strong> — Por <strong>Juan Pablo Montenegro Erazo</strong> y <strong>Juliana Ruiz Montoya</strong>.
         <p class="footer-note">Basado en el artículo científico de M. S. Bisht y K. C. Sarkar (2026), <em>«Can the ~ 5 kpc starburst ring in MW create eROSITA bubbles?»</em>, arXiv:2610.40049v1. Gráficas reproducidas con fines educativos y de divulgación científica.</p>
       </div>
       <div class="footer-links">
-        <a href="#el-misterio">↑ Volver arriba</a>
-        <a href="https://github.com/Juan-Pablo-Montenegro/Pagina_Comunicacion" target="_blank" rel="noopener noreferrer">Repositorio en GitHub ↗</a>
+        <a href="#el-misterio">Volver arriba</a>
+        <a href="https://github.com/Juan-Pablo-Montenegro/Pagina_Comunicacion" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a>
       </div>
     </div>
   </footer>
