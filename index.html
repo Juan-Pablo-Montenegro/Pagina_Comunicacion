@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El misterio de las burbujas gigantes de la Vía Láctea | Cosmos en Claro</title>
+  <meta name="description" content="¿Qué infló las colosales burbujas de rayos X de nuestra galaxia? Nuevas simulaciones en 3D resuelven el debate entre el corazón de la Vía Láctea y un anillo de estrellas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress-bar" id="readingProgress"></div>
+
+  <!-- Navegación principal -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span class="brand-name">Cosmos en Claro</span>
+        <span class="brand-tag">Divulgación Científica</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación del artículo">
+        <a href="#el-misterio">El Misterio</a>
+        <a href="#los-sospechosos">Los 2 Sospechosos</a>
+        <a href="#simulaciones">Simulación 3D</a>
+        <a href="#prueba-definitiva">El Veredicto</a>
+        <a href="#verificacion">Rigor Científico</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro" title="Cambiar modo de lectura">
+        <span class="theme-icon" id="themeIcon">☀️</span>
+        <span class="theme-label" id="themeLabel">Modo Claro</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO DEL ARTÍCULO -->
+    <article class="blog-article">
+      <header class="article-hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="bubble-glow bubble-north"></div>
+          <div class="bubble-glow bubble-south"></div>
+          <div class="galactic-plane-line"></div>
+        </div>
+        <div class="container hero-content">
+          <div class="article-badges">
+            <span class="badge badge-category">Astrofísica Galáctica</span>
+            <span class="badge badge-source">Basado en arXiv:2610.40049v1</span>
+            <span class="badge badge-time">⏱ 6 min de lectura</span>
+          </div>
+          <h1 class="article-title">
+            ¿Un monstruo en el centro o un anillo de fuego? El verdadero origen de las <em>burbujas gigantes</em> de la Vía Láctea
+          </h1>
+          <p class="article-subtitle">
+            Dos estructuras colosales de gas ultracaliente se alzan por encima y por debajo de nuestra galaxia como un reloj de arena cósmico. Algunos astrónomos pensaron que eran una ilusión óptica causada por un anillo de estrellas cercano. Una nueva simulación en 3D acaba de dictar sentencia.
+          </p>
+          <div class="article-meta">
+            <div class="author-info">
+              <div class="author-avatar">JP</div>
+              <div>
+                <div class="author-name">Por <strong>Juan Pablo Montenegro</strong></div>
+                <div class="article-date">Comunicación Científica • Estudio original de <strong>Mukesh Singh Bisht &amp; Kartick C. Sarkar</strong> (Octubre 2026)</div>
+              </div>
+            </div>
+            <div class="paper-reference-pill">
+              <span>📄 Artículo original:</span>
+              <a href="https://arxiv.org/abs/2610.40049" target="_blank" rel="noopener noreferrer">Bisht &amp; Sarkar (2026) — NTHU &amp; Raman Research Institute ↗</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- RESUMEN EJECUTIVO / EN 60 SEGUNDOS -->
+      <section class="container quick-summary-section">
+        <div class="summary-card">
+          <div class="summary-header">
+            <span class="summary-badge">⚡ La investigación en 60 segundos</span>
+            <span class="summary-hint">Ideal si tienes poco tiempo</span>
+          </div>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <span class="summary-num">01</span>
+              <h3>El fenómeno</h3>
+              <p>Si tuviéramos ojos de rayos X, veríamos dos burbujas gigantescas —las <strong>Burbujas de eROSITA</strong>— emergiendo del centro de la Vía Láctea y ocupando casi 80° del cielo.</p>
+            </div>
+            <div class="summary-item">
+              <span class="summary-num">02</span>
+              <h3>La controversia</h3>
+              <p>¿Nacieron de una gran erupción en el <strong>Centro Galáctico</strong> o son solo columnas de gas de un <strong>anillo de formación estelar</strong> a ~16.000 años luz (5 kpc) que parecen burbujas por perspectiva?</p>
+            </div>
+            <div class="summary-item">
+              <span class="summary-num">03</span>
+              <h3>El veredicto</h3>
+              <p>Simulaciones hidrodinámicas en 3D demuestran que el anillo de estrellas solo crea «chimeneas» difusas. <strong>Hace falta una inyección violenta desde el Centro Galáctico</strong> para crear las burbujas reales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUERPO DE LA ENTRADA DE BLOG -->
+      <div class="container article-layout">
+        <div class="article-body">
+
+          <!-- SECCIÓN 1: EL MISTERIO -->
+          <section id="el-misterio" class="content-section">
+            <p class="lead-paragraph">
+              Imagina salir en una noche despejada, mirar hacia la banda estrellada de la Vía Láctea y ponerte unas gafas capaces de ver <strong>rayos X</strong> y <strong>rayos gamma</strong>. El cielo tranquilo que conoces desaparecería. En su lugar, verías dos lóbulos colosales de gas ardiente, simétricos como las alas de una mariposa o un gigantesco reloj de arena, brotando hacia el norte y el sur del disco de nuestra galaxia.
+            </p>
+            <p>
+              No es ciencia ficción: esas estructuras existen de verdad. En 2010, el telescopio espacial Fermi descubrió dos enormes lóbulos de rayos gamma llamados <strong>Burbujas de Fermi</strong>. Diez años después, en 2020, el telescopio espacial de rayos X <strong>eROSITA</strong> reveló algo aún más grande: un par de gigantescas envolturas de gas caliente en rayos X —bautizadas como las <strong>Burbujas de eROSITA (eRBs)</strong>— que rodean por completo a las de Fermi y se extienden hasta abarcar unos 80 grados en la bóveda celeste.
+            </p>
+
+            <!-- DIAGRAMA INTERACTIVO ANATOMÍA GALÁCTICA -->
+            <div class="interactive-diagram-card">
+              <div class="diagram-header">
+                <h4>🌌 Esquema conceptual: ¿Qué estamos mirando en la Vía Láctea?</h4>
+                <p>Pasa el cursor o toca cada elemento para entender las piezas del rompecabezas.</p>
+              </div>
+              <div class="galaxy-svg-wrapper">
+                <svg viewBox="0 0 800 440" class="galaxy-diagram" role="img" aria-label="Diagrama de la Vía Láctea mostrando las burbujas de eROSITA, las burbujas de Fermi, el Centro Galáctico, el anillo de 5 kpc y la posición del Sol">
+                  <defs>
+                    <radialGradient id="erositaGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+                      <stop offset="75%" stop-color="#ea580c" stop-opacity="0.18"/>
+                      <stop offset="100%" stop-color="#fb923c" stop-opacity="0.6"/>
+                    </radialGradient>
+                    <radialGradient id="fermiGrad" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.25"/>
+                    </radialGradient>
+                    <linearGradient id="diskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+                      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                      <stop offset="50%" stop-color="#fef08a" stop-opacity="1"/>
+                      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Fondo estelar sutil -->
+                  <rect width="800" height="440" rx="16" fill="#090d1a"/>
+
+                  <!-- Burbujas de eROSITA (Exterior - Rayos X) -->
+                  <g class="diagram-hotspot" data-info="erosita">
+                    <ellipse cx="400" cy="115" rx="135" ry="95" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2" stroke-dasharray="6,3"/>
+                    <ellipse cx="400" cy="325" rx="135" ry="95" fill="url(#erositaGrad)" stroke="#fb923c" stroke-width="2" stroke-dasharray="6,3"/>
+                  </g>
+
+                  <!-- Burbujas de Fermi (Interior - Rayos Gamma) -->
+                  <g class="diagram-hotspot" data-info="fermi">
+                    <ellipse cx="400" cy="135" rx="82" ry="72" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="1.8"/>
+                    <ellipse cx="400" cy="305" rx="82" ry="72" fill="url(#fermiGrad)" stroke="#c084fc" stroke-width="1.8"/>
+                  </g>
+
+                  <!-- Chimeneas del anillo de 5 kpc (hipótesis alternativa) -->
+                  <g class="diagram-hotspot" data-info="ring">
+                    <path d="M 270 212 Q 255 150 285 110" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="4,4"/>
+                    <path d="M 530 212 Q 545 150 515 110" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="4,4"/>
+                    <circle cx="270" cy="220" r="10" fill="#06b6d4" stroke="#cffafe" stroke-width="2"/>
+                    <circle cx="530" cy="220" r="10" fill="#06b6d4" stroke="#cffafe" stroke-width="2"/>
+                  </g>
+
+                  <!-- Disco de la Vía Láctea -->
+                  <rect x="60" y="213" width="680" height="14" rx="7" fill="url(#diskGrad)"/>
+
+                  <!-- Centro Galáctico (Sgr A*) -->
+                  <g class="diagram-hotspot" data-info="center">
+                    <circle cx="400" cy="220" r="14" fill="#facc15" stroke="#fef9c3" stroke-width="3"/>
+                  </g>
+
+                  <!-- Posición del Sol -->
+                  <g class="diagram-hotspot" data-info="sun">
+                    <circle cx="195" cy="220" r="8" fill="#4ade80" stroke="#dcfce7" stroke-width="2"/>
+                    <line x1="195" y1="220" x2="340" y2="85" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+                    <line x1="195" y1="220" x2="340" y2="355" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7"/>
+                  </g>
+
+                  <!-- Etiquetas -->
+                  <text x="400" y="42" text-anchor="middle" fill="#fdba74" font-size="13" font-weight="700">Burbujas de eROSITA (Rayos X, ~80°)</text>
+                  <text x="400" y="138" text-anchor="middle" fill="#e9d5ff" font-size="12" font-weight="600">Burbujas de Fermi (Rayos γ)</text>
+                  <text x="400" y="252" text-anchor="middle" fill="#fde047" font-size="12" font-weight="700">Centro Galáctico (Sgr A*)</text>
+                  <text x="270" y="252" text-anchor="middle" fill="#67e8f9" font-size="11" font-weight="600">Anillo ~5 kpc</text>
+                  <text x="530" y="252" text-anchor="middle" fill="#67e8f9" font-size="11" font-weight="600">Anillo ~5 kpc</text>
+                  <text x="165" y="198" text-anchor="middle" fill="#86efac" font-size="12" font-weight="700">☀️ El Sol (~8 kpc)</text>
+                </svg>
+              </div>
+              <div class="diagram-info-box" id="diagramInfoBox">
+                <strong>💡 Explora el esquema:</strong> Haz clic o pasa el cursor sobre el <em>Centro Galáctico</em>, el <em>Anillo de ~5 kpc</em>, las <em>Burbujas de eROSITA</em> o <em>El Sol</em> para ver cómo influyen en el misterio.
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 2: LOS DOS SOSPECHOSOS -->
+          <section id="los-sospechosos" class="content-section">
+            <h2>Dos sospechosos para un mismo crimen cósmico</h2>
+            <p>
+              En astronomía hay un problema clásico: <strong>el cielo parece una pantalla plana en 2D</strong>. Cuando miramos una nube difusa de gas brillante en rayos X, es dificilísimo saber si es algo <em>gigantesco y lejano</em> (en el centro de la galaxia) o algo <em>más pequeño y cercano</em> a nosotros.
+            </p>
+            <p>
+              Esta incertidumbre dividió a la comunidad científica en dos bandos con explicaciones radicalmente distintas:
+            </p>
+
+            <div class="suspects-grid">
+              <div class="suspect-card suspect-central">
+                <div class="suspect-tag">Hipótesis 1 • El Motor Central</div>
+                <h3>🌋 Una explosión en el corazón de la Vía Láctea</h3>
+                <p>
+                  Las burbujas nacieron hace decenas de millones de años directamente en el <strong>Centro Galáctico</strong> (a unos 8 <span class="glossary-term" data-tooltip="1 kilopársec (kpc) equivale a unos 3.260 años luz. El centro de la Vía Láctea está a unos 8 kpc (~26.000 años luz) de la Tierra.">kilopársecs (kpc)</span> de nosotros). ¿El culpable? O bien un despertar violento de nuestro agujero negro supermasivo, <strong>Sagitario A*</strong>, o un estallido concentrado de supernovas nucleares que lanzó una onda de choque titánica hacia ambos hemisferios.
+                </p>
+              </div>
+
+              <div class="suspect-card suspect-ring">
+                <div class="suspect-tag">Hipótesis 2 • El Espejismo del Anillo</div>
+                <h3>🔥 Un anillo de estrellas a mitad de camino</h3>
+                <p>
+                  En 2024, varios investigadores (como Zhang et al. y Churazov et al.) propusieron una idea provocadora: ¿y si el Centro Galáctico no tuvo nada que ver? En nuestra galaxia, la mayor fábrica de estrellas no está en el centro, sino en un <strong>anillo situado a unos 4–5 kpc del centro</strong>. Sugirieron que las supernovas de ese anillo elevan columnas de gas caliente («chimeneas») que, vistas desde el Sol, se superponen y crean la ilusión de dos burbujas gigantes.
+                </p>
+              </div>
+            </div>
+
+            <blockquote class="science-quote">
+              «Si las burbujas de eROSITA fueran solo columnas de gas del anillo estelar de 5 kpc, cambiaría por completo nuestra comprensión de cómo respira y evoluciona el núcleo de la Vía Láctea».
+            </blockquote>
+          </section>
+
+          <!-- SECCIÓN 3: LAS SIMULACIONES 3D (FIGURAS 1 Y 2) -->
+          <section id="simulaciones" class="content-section">
+            <h2>Poner a la Vía Láctea dentro de una supercomputadora</h2>
+            <p>
+              Para resolver el debate sin adivinar, los astrofísicos <strong>Mukesh Singh Bisht</strong> (Universidad Nacional Tsing Hua, Taiwán) y <strong>Kartick C. Sarkar</strong> (Instituto de Investigación Raman, India) construyeron un gemelo digital tridimensional de nuestra galaxia utilizando el código hidrodinámico <code>PLUTO</code>.
+            </p>
+            <p>
+              Su modelo recrea el disco rotante de gas de la Vía Láctea, su halo de materia oscura y el tenue gas caliente que la rodea (el <span class="glossary-term" data-tooltip="El Medio Circungaláctico (CGM) es la inmensa atmósfera de gas caliente (a unos 3 millones de grados Kelvin) que envuelve el disco de una galaxia.">medio circungaláctico</span> a 3 millones de grados). Dentro de este universo virtual sembraron miles de cúmulos estelares de entre 1.000 y 1.000.000 de veces la masa del Sol y dejaron evolucionar la galaxia durante <strong>50 millones de años (50 Myr)</strong> en dos escenarios:
+            </p>
+
+            <ul>
+              <li><strong>Escenario 1 — Solo el Anillo Estelar (Simulación <code>DI</code>, <em>Inyección Distribuida</em>):</strong> Únicamente explotan supernovas y soplan vientos estelares a lo largo del disco galáctico, concentrados en el famoso anillo de ~5 kpc. Nada especial ocurre en el centro.</li>
+              <li><strong>Escenario 2 — Anillo + Corazón Galáctico (Simulación <code>DI+CI</code>, <em>Inyección Distribuida + Central</em>):</strong> Además del anillo de estrellas, se activa una potente inyección compacta de energía en el <strong>Centro Galáctico</strong> (equivalente a formar 0,5 masas solares de estrellas por año durante 27 millones de años).</li>
+            </ul>
+
+            <!-- VISOR INTERACTIVO DE LAS FIGURAS 1 Y 2 DEL ARTÍCULO -->
+            <div class="figure-showcase" id="simViewer">
+              <div class="figure-controls">
+                <div class="figure-title-group">
+                  <span class="figure-label">Gráficas 1 y 2 del artículo original</span>
+                  <h4>Evolución de la temperatura del gas en la Vía Láctea (17, 33 y 50 millones de años)</h4>
+                </div>
+                <div class="toggle-buttons" role="tablist" aria-label="Seleccionar simulación">
+                  <button class="sim-tab active" data-target="panel-di" role="tab" aria-selected="true">
+                    1️⃣ Solo Anillo ~5 kpc (Fig. 1: DI)
+                  </button>
+                  <button class="sim-tab" data-target="panel-dici" role="tab" aria-selected="false">
+                    2️⃣ Anillo + Centro Galáctico (Fig. 2: DI+CI)
+                  </button>
+                  <button class="sim-tab" data-target="panel-both" role="tab" aria-selected="false">
+                    ⚖️ Comparar ambas
+                  </button>
+                </div>
+              </div>
+
+              <div class="figure-panels">
+                <!-- Panel Figura 1 -->
+                <figure class="sim-panel active" id="panel-di">
+                  <div class="img-zoom-container">
+                    <img src="assets/images/fig1_simulation_di.png" alt="Figura 1 de Bisht y Sarkar (2026): Mapas de temperatura de la simulación DI (sin inyección central) a los 17, 33 y 50 millones de años, mostrando vista superior e inferior de canto." loading="lazy" />
+                  </div>
+                  <figcaption>
+                    <strong>Figura 1 del estudio (Escenario <code>DI</code> — Solo el anillo de ~5 kpc):</strong>
+                    <em>Arriba:</em> Vista desde arriba del disco galáctico (<em>z</em> = 2 kpc). Las zonas rojas (10<sup>7</sup>–10<sup>8</sup> K) forman un anillo de burbujas calientes a ~5 kpc del centro.
+                    <em>Abajo:</em> Vista de canto (<em>Y</em> = 0 kpc). Se elevan dos «chimeneas» en forma de cuernos desde <em>X</em> ≈ ±5 kpc, pero el centro (<em>X</em> = 0) permanece frío y sin erupción central.
+                  </figcaption>
+                </figure>
+
+                <!-- Panel Figura 2 -->
+                <figure class="sim-panel" id="panel-dici">
+                  <div class="img-zoom-container">
+                    <img src="assets/images/fig2_simulation_dici.png" alt="Figura 2 de Bisht y Sarkar (2026): Mapas de temperatura de la simulación DI+CI (con inyección en el Centro Galáctico) a los 17, 33 y 50 millones de años." loading="lazy" />
+                  </div>
+                  <figcaption>
+                    <strong>Figura 2 del estudio (Escenario <code>DI+CI</code> — Anillo + Inyección en el Centro Galáctico):</strong>
+                    A los 23 millones de años se enciende el motor del Centro Galáctico (<em>X</em> = 0). A los <strong>50 Myr</strong> (abajo a la derecha), una gigantesca columna central perfora el halo hasta más de 10–15 kpc de altura, generando una onda de choque envolvente con bordes definidos.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="reading-guide-box">
+                <h5>🔍 ¿Cómo leer los colores de estas gráficas?</h5>
+                <p>
+                  La barra superior muestra el logaritmo de la temperatura en Kelvin (log<sub>10</sub> <em>T</em>). El <strong>azul/verde</strong> (10<sup>4</sup>–10<sup>6</sup> K) es gas tibio o del halo; el <strong>amarillo/naranja</strong> (~5 × 10<sup>6</sup> K) es gas comprimido por ondas de choque (¡el que más brilla en los rayos X que detecta eROSITA!); y el <strong>rojo oscuro</strong> (10<sup>7</sup>–10<sup>8</sup> K, hasta 100 millones de grados) es gas ultracaliente pero tan extremadamente poco denso que resulta casi transparente en rayos X blandos.
+                </p>
+              </div>
+            </div>
+
+            <h3>El talón de Aquiles de las «chimeneas» del anillo</h3>
+            <p>
+              Al analizar la física de la Figura 1, Bisht y Sarkar encontraron el primer gran problema para la teoría del anillo estelar: sí, el anillo de 5 kpc levanta dos enormes chimeneas de gas muy caliente (entre 10 y 100 millones de grados), tal como habían intuido estudios previos. <strong>Pero ese gas está demasiado vacío</strong>: su densidad es de apenas 10<sup>−5</sup> a 10<sup>−4</sup> partículas por centímetro cúbico.
+            </p>
+            <p>
+              En astrofísica de rayos X, para que una nube de gas brille intensamente en el rango de energía que observa eROSITA (~0,44 a 1,01 keV), no basta con que esté caliente; necesita suficiente densidad. Las chimeneas del anillo son tan tenues que son prácticamente invisibles en esa banda, y además carecen por completo de los bordes nítidos que caracterizan a las burbujas reales.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 4: LA PRUEBA DEFINITIVA (FIGURA 3) -->
+          <section id="prueba-definitiva" class="content-section">
+            <h2>La prueba definitiva: ¿Qué se ve desde la Tierra?</h2>
+            <p>
+              El paso más brillante del estudio fue situar una cámara virtual de rayos X exactamente en la posición del Sistema Solar (a unos 8 kpc del centro galáctico) y generar un mapa de todo el cielo, idéntico al que toman los telescopios espaciales reales. El resultado, plasmado en la <strong>Figura 3 del artículo</strong>, no deja lugar a dudas:
+            </p>
+
+            <figure class="figure-showcase highlight-figure">
+              <div class="figure-header-banner">
+                <span class="figure-label">Gráfica principal • Figura 3 de Bisht &amp; Sarkar (2026)</span>
+                <h4>El cielo en rayos X visto desde el Sol: Anillo Estelar vs. Explosión Central</h4>
+              </div>
+              <div class="img-zoom-container">
+                <img src="assets/images/fig3_xray_sky_maps.png" alt="Figura 3 de Bisht y Sarkar (2026): Mapas de brillo superficial en rayos X (0.44 a 1.01 keV) proyectados desde la posición del Sol. Izquierda: sin inyección central (DI). Derecha: con inyección en el Centro Galáctico (DI+CI), donde aparecen claramente las dos enormes burbujas de eROSITA." />
+              </div>
+              <div class="comparison-annotations">
+                <div class="annotation-col annotation-left">
+                  <span class="annotation-pill pill-fail">❌ Panel Izquierdo: Solo Anillo de ~5 kpc (DI)</span>
+                  <p>
+                    <strong>Sin rastro de las burbujas gigantes.</strong> Solo se observan arcos pequeños y desordenados cerca del plano central (entre −30° y +30° de latitud). El anillo de estrellas es incapaz de inflar estructuras coherentes hacia los polos galácticos.
+                  </p>
+                </div>
+                <div class="annotation-col annotation-right">
+                  <span class="annotation-pill pill-success">✅ Panel Derecho: Anillo + Centro Galáctico (DI+CI)</span>
+                  <p>
+                    <strong>¡Aparecen las Burbujas de eROSITA!</strong> Dos lóbulos colosales y coherentes de <strong>~80° de tamaño</strong> emergen hacia arriba y hacia abajo del centro (0°), con el brillo y el borde afilado exactos que observan los telescopios reales.
+                  </p>
+                </div>
+              </div>
+              <figcaption>
+                <strong>Figura 3 del artículo original:</strong> Mapas en proyección Aitoff-Hammer del brillo superficial en rayos X (banda R4 de ROSAT, 0,44–1,01 keV) a los 50 millones de años. Colores más oscuros/morados indican mayor intensidad de rayos X.
+              </figcaption>
+            </figure>
+
+            <h3>Tres pruebas de fuego para no dejar cabos sueltos</h3>
+            <p>
+              Un buen científico intenta derribar su propia conclusión antes de publicarla. ¿Podría el anillo de 5 kpc producir las burbujas si cambiamos alguna condición? Los autores sometieron su simulación a tres pruebas extremas:
+            </p>
+
+            <div class="stress-tests-grid">
+              <div class="test-card">
+                <div class="test-icon">🧭</div>
+                <h4>1. ¿Y si el Sol estuviera en otro ángulo?</h4>
+                <p>
+                  Probaron <strong>12 posiciones distintas para el Sol</strong> alrededor de la galaxia (cada 30°). En el modelo de solo anillo (<code>DI</code>), las burbujas no aparecieron desde <strong>ningún ángulo (0 de 12)</strong>. En cambio, con inyección central (<code>DI+CI</code>), las burbujas son claramente visibles desde la mitad de las ubicaciones solares posibles (<em>φ</em> = 120° a 270°).
+                </p>
+              </div>
+
+              <div class="test-card">
+                <div class="test-icon">⚛️</div>
+                <h4>2. ¿Y si el gas tuviera 10 veces más metales?</h4>
+                <p>
+                  Quienes defendían la hipótesis del anillo sugerían que una alta <span class="glossary-term" data-tooltip="En astronomía, se llama «metales» a todos los elementos químicos más pesados que el hidrógeno y el helio (como oxígeno, hierro o neón). Más metales hacen que el gas emita más rayos X.">metalicidad</span> haría brillar las chimeneas. Los autores multiplicaron artificialmente por <strong>10 veces</strong> los metales del gas inyectado. ¿El resultado? <strong>Tampoco aparecieron las burbujas.</strong>
+                </p>
+              </div>
+
+              <div class="test-card">
+                <div class="test-icon">📡</div>
+                <h4>3. ¿Y si miramos en otras frecuencias de rayos X?</h4>
+                <p>
+                  Generaron mapas sintéticos en otras cuatro bandas de energía de rayos X (bandas R1, R2, R5 y R6). En ninguna de ellas el anillo de 5 kpc logró crear estructuras parecidas a las de eROSITA.
+                </p>
+              </div>
+            </div>
+
+            <h3>Un hallazgo extra: por qué las burbujas reales tienen «parches»</h3>
+            <p>
+              Aunque el anillo de formación estelar no creó las burbujas de eROSITA, tampoco es un simple espectador. La simulación <code>DI+CI</code> reveló algo fascinante: cuando la gran explosión del Centro Galáctico se expande, choca con las cavidades de baja densidad y las ondas de choque previas que habían dejado las estrellas del disco. Eso deforma ligeramente las burbujas y les da un <strong>aspecto grumoso y asimétrico</strong>, explicando de forma natural por qué las burbujas reales que vemos en el cielo no son esferas perfectas.
+            </p>
+
+            <h2>Conclusión: El corazón de nuestra galaxia sigue latiendo con fuerza</h2>
+            <p>
+              El trabajo de Bisht y Sarkar cierra una importante grieta en nuestra historia galáctica. Las gigantescas Burbujas de eROSITA no son una ilusión óptica provocada por chimeneas de estrellas cercanas en el disco: <strong>son la huella real de un colosal estallido energético ocurrido en el mismísimo corazón de la Vía Láctea hace unos 27 millones de años</strong>. Nuestra galaxia, que a menudo imaginamos como un hogar tranquilo y estable, guarda en su cielo las cicatrices luminosas de un pasado tempestuoso.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 5: AUDITORÍA Y RIGOR CIENTÍFICO -->
+          <section id="verificacion" class="content-section verification-section">
+            <div class="verification-header">
+              <div>
+                <span class="badge badge-verified">✓ Verificación Científica y Editorial</span>
+                <h2>Control de fidelidad con el artículo original</h2>
+              </div>
+              <p>
+                Cada afirmación de esta entrada de divulgación ha sido contrastada directamente con los datos, ecuaciones y gráficas de <em>Bisht &amp; Sarkar (2026), arXiv:2610.40049v1</em>.
+              </p>
+            </div>
+
+            <div class="verification-table-wrapper">
+              <table class="verification-table">
+                <thead>
+                  <tr>
+                    <th>Concepto en el blog</th>
+                    <th>Dato exacto en el artículo científico</th>
+                    <th>Sección / Fuente</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tamaño de las burbujas de Fermi y eROSITA</td>
+                    <td>Fermi: |<em>b</em>| ≲ 50°, |<em>l</em>| ≲ 20°. eROSITA: estructuras coherentes de ~80° en rayos X.</td>
+                    <td>Sección 1 y Sección 3 (pág. 1 y 4)</td>
+                  </tr>
+                  <tr>
+                    <td>Hipótesis del anillo estelar</td>
+                    <td>Anillo de formación estelar en <em>R</em> ≈ 4–5 kpc propuesto por Zhang et al. (2024) y Churazov et al. (2024).</td>
+                    <td>Resumen, Sección 1 y 2 (pág. 1 y 2)</td>
+                  </tr>
+                  <tr>
+                    <td>Configuración de la simulación 3D</td>
+                    <td>Código <code>PLUTO</code>, malla de ±12 kpc (<em>x,y</em>) y 15 kpc (<em>z</em>); ISM a 4 × 10<sup>4</sup> K (1 Z<sub>☉</sub>) y CGM a 3 × 10<sup>6</sup> K (0,3 Z<sub>☉</sub>).</td>
+                    <td>Sección 2 y Tabla 1 (pág. 2 y 7)</td>
+                  </tr>
+                  <tr>
+                    <td>Propiedades de las chimeneas vs. choques</td>
+                    <td>Chimeneas: <em>T</em> ≈ 10<sup>7</sup>–10<sup>8</sup> K, baja densidad (10<sup>−5</sup>–10<sup>−4</sup> cm<sup>−3</sup>). Gas chocado exterior: <em>T</em> ≈ 5 × 10<sup>6</sup> K, <em>n</em> ≈ 10<sup>−3</sup> cm<sup>−3</sup>.</td>
+                    <td>Sección 3 (pág. 4)</td>
+                  </tr>
+                  <tr>
+                    <td>Edad e inyección central (<code>DI+CI</code>)</td>
+                    <td>Simulación de 50 Myr; inyección central activada a los 23 Myr (edad de las burbujas ≈ 27 Myr) con SFR = 0,5 M<sub>☉</sub> yr<sup>−1</sup> en radio de 50 pc.</td>
+                    <td>Sección 2 y Fig. 3 (pág. 4 y 5)</td>
+                  </tr>
+                  <tr>
+                    <td>Pruebas de robustez (posiciones solares, metalicidad y bandas)</td>
+                    <td>12 ubicaciones solares (Δ<em>φ</em> = 30°, visible en 50% para <code>DI+CI</code> y 0% para <code>DI</code>); metalicidad ×10; bandas ROSAT R1, R2, R4 (0,44–1,01 keV), R5 y R6.</td>
+                    <td>Sección 3 (pág. 4 y 5)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- BARRA LATERAL (FICHA TÉCNICA Y NAVEGACIÓN RÁPIDA) -->
+        <aside class="article-sidebar">
+          <div class="sidebar-sticky">
+            <div class="sidebar-card">
+              <h3>📌 Ficha del Estudio</h3>
+              <dl class="meta-list">
+                <dt>Título original</dt>
+                <dd><em>Can the ~ 5 kpc starburst ring in MW create eROSITA bubbles?</em></dd>
+                <dt>Autores</dt>
+                <dd>Mukesh Singh Bisht &amp; Kartick C. Sarkar</dd>
+                <dt>Instituciones</dt>
+                <dd>National Tsing Hua University (Taiwán) &amp; Raman Research Institute (India)</dd>
+                <dt>Identificador</dt>
+                <dd><code>arXiv:2610.40049v1 [astro-ph.GA]</code></dd>
+                <dt>Herramientas clave</dt>
+                <dd>PLUTO (3D HD), CLOUDY-v17, Starburst99, PASS, APEC</dd>
+              </dl>
+            </div>
+
+            <div class="sidebar-card glossary-card">
+              <h3>📖 Mini-Glosario</h3>
+              <ul class="glossary-list">
+                <li><strong>1 kpc (kilopársec):</strong> Equivale a 3.260 años luz (≈ 3 × 10<sup>16</sup> km).</li>
+                <li><strong>eROSITA:</strong> Telescopio espacial de rayos X que cartografió todo el cielo.</li>
+                <li><strong>M<sub>☉</sub> (Masa solar):</strong> Unidad de masa equivalente a nuestro Sol (2 × 10<sup>30</sup> kg).</li>
+                <li><strong>Myr:</strong> Millones de años.</li>
+                <li><strong>Metalicidad (Z<sub>☉</sub>):</strong> Abundancia de elementos más pesados que el helio comparada con el Sol.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>✦ Cosmos en Claro</strong> — Portal de Comunicación Científica de Juan Pablo Montenegro.
+        <p class="footer-note">Basado en el artículo científico de M. S. Bisht y K. C. Sarkar (2026), <em>«Can the ~ 5 kpc starburst ring in MW create eROSITA bubbles?»</em>, arXiv:2610.40049v1. Gráficas reproducidas con fines educativos y de divulgación científica.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#el-misterio">↑ Volver arriba</a>
+        <a href="https://github.com/Juan-Pablo-Montenegro/Pagina_Comunicacion" target="_blank" rel="noopener noreferrer">Repositorio en GitHub ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal para ampliar gráficas -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen ampliada">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
