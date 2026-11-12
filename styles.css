@@ -559,25 +559,59 @@ code {
 }
 
 .suspect-column h3 {
-  font-size: 1.12rem;
-  margin: 0;
+  font-size: 1.08rem;
+  margin: 0 0 0.25rem;
   line-height: 1.3;
 }
 
-.suspect-column p {
-  font-size: 0.96rem;
-  margin-bottom: 0;
+.suspect-caption {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
 }
 
-.science-quote {
-  margin: 2.25rem 0;
-  padding: 0.5rem 0 0.5rem 1.5rem;
-  border-left: 3px solid var(--accent-purple);
-  font-family: 'Lora', Georgia, serif;
-  font-size: 1.18rem;
-  font-style: italic;
-  color: var(--text-primary);
-  line-height: 1.65;
+/* Visual Strip for the 3 Stress Tests in "El veredicto" */
+.tests-visual-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.75rem 0;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.visual-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+}
+
+.visual-strip-item span {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.article-source-line {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.article-source-line a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.article-source-line a:hover {
+  text-decoration: underline;
 }
 
 /* Inline Segmented Tab Controls for Simulation Figures */
