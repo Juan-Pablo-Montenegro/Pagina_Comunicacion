@@ -391,22 +391,20 @@ code {
   border: 1px solid var(--border-color);
 }
 
-/* High-Contrast Definition Tooltips */
+/* High-Contrast Definition Tooltips (No background box on text) */
 .glossary-term {
   border-bottom: 1.5px dashed var(--accent-orange);
-  color: var(--text-primary);
-  background: rgba(251, 146, 60, 0.08);
-  padding: 0.05rem 0.3rem;
-  border-radius: 4px;
+  color: inherit;
+  background: transparent;
+  padding: 0;
   cursor: help;
   position: relative;
-  font-weight: 600;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .glossary-term:hover,
 .glossary-term:focus {
-  background: rgba(251, 146, 60, 0.22);
+  border-bottom-style: solid;
   outline: none;
 }
 
