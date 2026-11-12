@@ -51,9 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     hotspot.addEventListener('click', updateInfo);
   });
 
-  // 4. Pestañas interactivas de Simulación (Figura 1 vs Figura 2 vs Ambas)
+  // 4. Pestañas interactivas de Simulación (Figura 1 vs Figura 2)
   const simTabs = document.querySelectorAll('.sim-tab');
-  const figurePanelsContainer = document.querySelector('.figure-panels');
   const panelDi = document.getElementById('panel-di');
   const panelDici = document.getElementById('panel-dici');
 
@@ -67,15 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.setAttribute('aria-selected', 'true');
 
       const target = tab.getAttribute('data-target');
-      if (target === 'panel-both') {
-        figurePanelsContainer.classList.add('compare-both');
-        panelDi.classList.add('active');
-        panelDici.classList.add('active');
-      } else {
-        figurePanelsContainer.classList.remove('compare-both');
-        panelDi.classList.toggle('active', target === 'panel-di');
-        panelDici.classList.toggle('active', target === 'panel-dici');
-      }
+      panelDi.classList.toggle('active', target === 'panel-di');
+      panelDici.classList.toggle('active', target === 'panel-dici');
     });
   });
 

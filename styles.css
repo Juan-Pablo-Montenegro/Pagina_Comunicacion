@@ -459,33 +459,60 @@ code {
   border: 1px solid var(--border-color);
 }
 
-/* Glossary Tooltips */
+/* High-Contrast Definition Tooltips */
 .glossary-term {
   border-bottom: 1.5px dashed var(--accent-orange);
   color: var(--text-primary);
+  background: rgba(251, 146, 60, 0.08);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
   cursor: help;
   position: relative;
   font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.glossary-term:hover::after {
+.glossary-term:hover,
+.glossary-term:focus {
+  background: rgba(251, 146, 60, 0.22);
+  outline: none;
+}
+
+.glossary-term::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 130%;
+  bottom: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%);
-  width: 270px;
+  transform: translateX(-50%) translateY(4px);
+  width: 280px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.48;
+  padding: 0.8rem 0.95rem;
+  border-radius: 10px;
+  border: 2px solid var(--accent-orange);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65);
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+
+[data-theme="light"] .glossary-term::after {
   background: #0f172a;
   color: #f8fafc;
-  font-size: 0.82rem;
-  font-weight: 400;
-  line-height: 1.45;
-  padding: 0.75rem 0.9rem;
-  border-radius: 10px;
-  border: 1px solid var(--accent-orange);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-  z-index: 100;
-  pointer-events: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.32);
+}
+
+.glossary-term:hover::after,
+.glossary-term:focus::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Interactive Galaxy Diagram */
