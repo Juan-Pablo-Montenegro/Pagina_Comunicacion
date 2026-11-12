@@ -1,15 +1,6 @@
-# Didáctica de las Ciencias — Comunicación Científica
+# Blog Didáctica de las Ciencias
 
-Repositorio del artículo de divulgación científica **«El verdadero origen de las burbujas gigantes de la Vía Láctea»**, elaborado por **Juan Pablo Montenegro Erazo** y **Juliana Ruiz Montoya**.
-
-## Publicación de referencia
-
-El contenido de esta página expone para un público general los resultados del estudio astrofísico:
-
-- **Título:** *Can the ~ 5 kpc starburst ring in MW create eROSITA bubbles?*
-- **Autores:** Mukesh Singh Bisht y Kartick C. Sarkar (2026)
-- **Instituciones:** National Tsing Hua University y Raman Research Institute
-- **Referencia:** [arXiv:2610.40049v1](https://arxiv.org/abs/2610.40049)
+Blog realizado para la asignatura de Comunicación y Didáctica de las Ciencias. Elaborado por **Juan Pablo Montenegro Erazo** y **Juliana Ruiz Montoya**.
 
 ## Enlace de acceso
 
